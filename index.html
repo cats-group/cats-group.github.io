@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CATS Lab — Computational Analysis of Text and Society</title>
+  <meta name="description" content="The Computational Analysis of Text and Society (CATS) Lab at the University of Maryland." />
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a class="nav-brand" href="index.html" aria-label="CATS Lab home">
+        <img src="images/logo.svg" alt="CATS Lab logo" />
+        <span>CATS</span>&nbsp;Lab
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="join.html">Join Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <header class="hero">
+      <img src="images/logo.svg" alt="CATS Lab logo" class="hero-logo" />
+      <h1>Computational Analysis of<br>Text and Society</h1>
+      <p class="subtitle">
+        We develop computational methods to understand language, culture,
+        and society — bridging NLP, social science, and AI at the University of Maryland.
+      </p>
+    </header>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About the Lab</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              The CATS Lab is an interdisciplinary research group at the
+              <a href="https://umd.edu" target="_blank" rel="noopener">University of Maryland</a>.
+              We use computational methods — natural language processing, machine learning,
+              and data science — to study how language shapes and reflects social phenomena.
+            </p>
+            <p>
+              Our work spans diverse topics including media framing, political discourse,
+              misinformation detection, cultural analytics, and AI fairness. We care about
+              building tools and publishing research that is both technically rigorous and
+              socially meaningful.
+            </p>
+            <p>
+              We actively collaborate across departments in Computer Science, Linguistics,
+              Journalism, and Public Policy, and welcome students from all of these backgrounds.
+            </p>
+          </div>
+          <div class="about-highlights">
+            <h3>Research Themes</h3>
+            <ul>
+              <li>Natural Language Processing &amp; Text Analysis</li>
+              <li>Computational Social Science</li>
+              <li>Misinformation &amp; Media Studies</li>
+              <li>AI Fairness, Ethics &amp; Safety</li>
+              <li>Cultural Analytics</li>
+              <li>Political Discourse &amp; Framing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Recent News ===== -->
+    <section class="section" id="news">
+      <div class="container">
+        <h2 class="section-title">Recent News</h2>
+        <div class="news-list">
+
+          <article class="news-item">
+            <div class="news-date">March 2026</div>
+            <h3>New paper accepted at ACL 2026</h3>
+            <p>
+              Our work on cross-lingual framing detection has been accepted at the
+              Annual Meeting of the Association for Computational Linguistics. Congrats to the team!
+            </p>
+          </article>
+
+          <article class="news-item">
+            <div class="news-date">February 2026</div>
+            <h3>NSF grant awarded for misinformation research</h3>
+            <p>
+              We received a new NSF grant to study the spread and correction of
+              misinformation in online communities. We are hiring — <a href="join.html">join us!</a>
+            </p>
+          </article>
+
+          <article class="news-item">
+            <div class="news-date">January 2026</div>
+            <h3>Two papers at AAAI 2026</h3>
+            <p>
+              Lab members presented two papers at AAAI 2026 in Philadelphia on topics of
+              narrative framing and culturally-aware language models.
+            </p>
+          </article>
+
+          <article class="news-item">
+            <div class="news-date">December 2025</div>
+            <h3>Welcome, new PhD students!</h3>
+            <p>
+              We welcome three new PhD students joining the lab in Spring 2026.
+              Check out the <a href="team.html">team page</a> for their profiles.
+            </p>
+          </article>
+
+          <article class="news-item">
+            <div class="news-date">November 2025</div>
+            <h3>Best paper award at EMNLP 2025</h3>
+            <p>
+              Our paper on large language models and political bias received an
+              Outstanding Paper award at EMNLP 2025. Congratulations to all co-authors!
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 CATS Lab &mdash; University of Maryland &middot;
+      <a href="mailto:cats-lab@umd.edu">cats-lab@umd.edu</a>
+    </p>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const links  = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>
