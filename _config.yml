@@ -1,0 +1,40 @@
+title: "CATS Lab"
+description: "Computational Analysis of Text and Society — University of Maryland"
+url: "https://cats-group.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  team:
+    output: false
+
+# Sass
+sass:
+  style: compressed
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - "*.sh"
+
+# Site metadata used in layouts
+lab:
+  name: "CATS Lab"
+  full_name: "Computational Analysis of Text and Society Lab"
+  university: "University of Maryland"
+  email: "cats-lab@umd.edu"
+  logo: "/assets/images/logo.svg"
