@@ -1,0 +1,74 @@
+# Team Members
+# Fields: name, role, group, photo (optional), website, scholar, github, twitter, linkedin
+# group: faculty | phd | masters | undergrad | alumni
+
+- name: "Prof. Jane Smith"
+  role: "Principal Investigator"
+  group: faculty
+  bio: "Jane works on computational approaches to media framing, political discourse, and AI fairness. She joined UMD in 2019."
+  website: "https://example.com"
+  scholar: "https://scholar.google.com"
+  twitter: "https://twitter.com"
+
+- name: "Alex Johnson"
+  role: "PhD Student, 3rd year"
+  group: phd
+  bio: "Alex studies cross-lingual framing and multilingual NLP."
+  website: "https://example.com"
+  github: "https://github.com"
+
+- name: "Maria Chen"
+  role: "PhD Student, 2nd year"
+  group: phd
+  bio: "Maria's research focuses on narrative framing in social media."
+  website: "https://example.com"
+  twitter: "https://twitter.com"
+
+- name: "David Park"
+  role: "PhD Student, 2nd year"
+  group: phd
+  bio: "David works on measuring and mitigating political bias in LLMs."
+  scholar: "https://scholar.google.com"
+  linkedin: "https://linkedin.com"
+
+- name: "Priya Nair"
+  role: "PhD Student, 1st year"
+  group: phd
+  bio: "Priya is interested in AI fairness and representation in language models."
+  website: "https://example.com"
+  github: "https://github.com"
+
+- name: "Sam Rivera"
+  role: "PhD Student, 1st year"
+  group: phd
+  bio: "Sam studies misinformation and its spread in online communities."
+  website: "https://example.com"
+
+- name: "Yuki Tanaka"
+  role: "PhD Student, 1st year"
+  group: phd
+  bio: "Yuki works on culturally-aware language models for low-resource languages."
+  twitter: "https://twitter.com"
+  github: "https://github.com"
+
+- name: "Jordan Lee"
+  role: "MS Student"
+  group: masters
+  bio: "Jordan focuses on multi-modal misinformation detection."
+  linkedin: "https://linkedin.com"
+
+- name: "Casey Wu"
+  role: "Undergraduate Researcher"
+  group: undergrad
+  bio: "Casey is working on data annotation and evaluation for NLP tasks."
+  github: "https://github.com"
+
+- name: "Dr. Lena Müller"
+  role: "PhD 2024 → Postdoc, Stanford University"
+  group: alumni
+  website: "https://example.com"
+
+- name: "Dr. Omar Hassan"
+  role: "PhD 2023 → Research Scientist, Google"
+  group: alumni
+  linkedin: "https://linkedin.com"

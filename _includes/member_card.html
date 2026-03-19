@@ -1,0 +1,50 @@
+{% comment %}
+  Include with: {% include member_card.html member=m %}
+{% endcomment %}
+{% assign m = include.member %}
+<div class="member-card h-100">
+  {% if m.photo %}
+    <div class="member-photo mx-auto">
+      <img src="{{ m.photo | relative_url }}" alt="{{ m.name }}" />
+    </div>
+  {% else %}
+    <div class="member-photo-placeholder mx-auto">
+      <i class="fa-solid fa-user"></i>
+    </div>
+  {% endif %}
+
+  <div class="member-name">{{ m.name }}</div>
+  <div class="member-role">{{ m.role }}</div>
+
+  {% if m.bio %}
+    <p class="member-bio">{{ m.bio }}</p>
+  {% endif %}
+
+  <div class="member-links d-flex flex-wrap gap-1 justify-content-center">
+    {% if m.website %}
+      <a href="{{ m.website }}" target="_blank" rel="noopener" aria-label="{{ m.name }} website">
+        <i class="fa-solid fa-globe fa-xs"></i> Website
+      </a>
+    {% endif %}
+    {% if m.scholar %}
+      <a href="{{ m.scholar }}" target="_blank" rel="noopener" aria-label="{{ m.name }} Google Scholar">
+        <i class="fa-solid fa-graduation-cap fa-xs"></i> Scholar
+      </a>
+    {% endif %}
+    {% if m.github %}
+      <a href="{{ m.github }}" target="_blank" rel="noopener" aria-label="{{ m.name }} GitHub">
+        <i class="fa-brands fa-github fa-xs"></i> GitHub
+      </a>
+    {% endif %}
+    {% if m.twitter %}
+      <a href="{{ m.twitter }}" target="_blank" rel="noopener" aria-label="{{ m.name }} Twitter/X">
+        <i class="fa-brands fa-x-twitter fa-xs"></i> Twitter
+      </a>
+    {% endif %}
+    {% if m.linkedin %}
+      <a href="{{ m.linkedin }}" target="_blank" rel="noopener" aria-label="{{ m.name }} LinkedIn">
+        <i class="fa-brands fa-linkedin fa-xs"></i> LinkedIn
+      </a>
+    {% endif %}
+  </div>
+</div>
