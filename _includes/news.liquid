@@ -1,0 +1,52 @@
+<div class="news">
+  {% assign news = site.news %}
+  {% if news == blank %}
+    {% assign news_page = site.pages | where_exp: 'p', "p.path == '_pages/news.md'" | first %}
+    {% if news_page and news_page.news_items %}
+      {% assign news = news_page.news_items | sort: 'date' | reverse %}
+    {% endif %}
+  {% else %}
+    {% assign news = news | sort: 'date' | reverse %}
+  {% endif %}
+
+  {% if news != blank %}
+    {% assign news_size = news | size %}
+    {% assign news_limit = news_size %}
+
+    {% if include.show_limit %}
+      {% assign news_limit = include.show_limit | plus: 0 %}
+    {% elsif include.limit and site.announcements.limit %}
+      {% assign news_limit = site.announcements.limit %}
+    {% endif %}
+
+    {% if news_limit > news_size %}
+      {% assign news_limit = news_size %}
+    {% endif %}
+
+    <div class="news-list">
+      {% for item in news limit: news_limit %}
+        <div class="news-row mb-3">
+          <div class="news-date">{{ item.date | date: '%b %d, %Y' }}</div>
+          <div class="news-content">{{ item.content | markdownify | emojify }}</div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% assign remaining_news = news_size | minus: news_limit %}
+    {% if include.collapsible and remaining_news > 0 %}
+      <details class="news-more">
+        <summary>See more ({{ remaining_news }})</summary>
+        <div class="news-list mt-3">
+          {% for item in news offset: news_limit %}
+            <div class="news-row mb-3">
+              <div class="news-date">{{ item.date | date: '%b %d, %Y' }}</div>
+              <div class="news-content">{{ item.content | markdownify | emojify }}</div>
+            </div>
+          {% endfor %}
+        </div>
+      </details>
+    {% endif %}
+  {% else %}
+    <p>No news so far...</p>
+  {% endif %}
+</div>

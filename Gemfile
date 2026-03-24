@@ -1,6 +1,19 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "jekyll", "~> 4.4"
-gem "jekyll-feed", "~> 0.17"
-gem "jekyll-seo-tag", "~> 2.8"
-gem "webrick", "~> 1.8"  # required for Ruby 3+
+gem 'ostruct'
+
+group :jekyll_plugins do
+    gem 'jekyll'
+    gem 'jekyll-email-protect'
+    gem 'jekyll-link-attributes'
+    gem 'jekyll-minifier'
+    gem 'jekyll-scholar'
+    gem 'jekyll-sitemap'
+    gem 'jemoji'
+    gem 'mini_racer'
+    gem 'unicode_utils'
+    gem 'webrick'
+end
+group :other_plugins do
+    gem 'css_parser'
+end

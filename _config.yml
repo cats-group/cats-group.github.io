@@ -1,40 +1,141 @@
-title: "CATS Lab"
-description: "Computational Analysis of Text and Society — University of Maryland"
-url: "https://cats-group.github.io"
-baseurl: ""
+title: CATS Lab
+first_name: Computational Analysis of Text and Society
+last_name:
+description: >
+  CATS (Computational Analysis of Text and Society) is an interdisciplinary research lab at the University of Maryland.
+keywords: CATS lab, natural language processing, computational social science, political communication, sociolinguistics
+lang: en
+icon: lab_logo.png
 
-# Build settings
+url: https://cats-group.github.io
+baseurl:
+last_updated: False
+back_to_top: true
+
+navbar_fixed: true
+footer_enabled: false
+search_enabled: false
+max_width: 930px
+
+announcements:
+  enabled: true
+  limit:
+
 markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
 
-# Plugins
+include: ["_pages"]
+exclude:
+  - bin/
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - purgecss.config.js
+  - README.md
+  - INSTALL.md
+  - CUSTOMIZE.md
+  - vendor
+keep_files:
+  - CNAME
+  - .nojekyll
+
 plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+  - jekyll-email-protect
+  - jekyll-link-attributes
+  - jekyll-minifier
+  - jekyll/scholar
+  - jekyll-sitemap
 
-# Collections
-collections:
-  team:
-    output: false
+defaults:
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false
 
-# Sass
 sass:
   style: compressed
 
-# Exclude from build
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - "*.sh"
+jekyll-minifier:
+  exclude: ["robots.txt"]
+  uglifier_args:
+    harmony: true
 
-# Site metadata used in layouts
-lab:
-  name: "CATS Lab"
-  full_name: "Computational Analysis of Text and Society Lab"
-  university: "University of Maryland"
-  email: "cats-lab@umd.edu"
-  logo: "/assets/images/logo.svg"
+scholar:
+  last_name: []
+  first_name: []
+  style: apa
+  locale: en
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bib
+  bibtex_filters: [latex, smallcaps, superscript]
+  replace_strings: true
+  join_strings: true
+  details_dir: bibliography
+  details_link: Details
+  query: "@*"
+  group_by: year
+  group_order: descending
+
+enable_publication_badges:
+  altmetric: false
+  dimensions: false
+  google_scholar: false
+
+filtered_bibtex_keywords: [abbr, abstract, additional_info, altmetric, annotation, arxiv, award, award_name, bibtex_show, blog, code, html, pdf, poster, preview, slides, supp, video, website]
+
+max_author_limit:
+more_authors_animation_delay: 10
+enable_publication_thumbnails: false
+enable_video_embedding: false
+
+external_links:
+  enabled: true
+  rel: external nofollow noopener
+  target: _blank
+  exclude:
+
+imagemagick:
+  enabled: false
+lazy_loading_images: true
+
+enable_math: true
+enable_darkmode: true
+third_party_libraries:
+  mdb:
+    integrity:
+      css: "sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+      js: "sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+    url:
+      css: "https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/css/mdb.min.css"
+      js: "https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/js/mdb.min.js"
+    version: "4.20.0"
+  google_fonts:
+    url:
+      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+  jquery:
+    integrity:
+      js: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    url:
+      js: "https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+    version: "3.6.0"
+  mathjax:
+    integrity:
+      js: "sha256-rjmgmaB99riUNcdlrDtcAiwtLIojSxNyUFdl+Qh+rB4="
+    url:
+      js: "https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-chtml.min.js"
+    version: "3.2.0"
+  polyfill:
+    url:
+      js: "https://cdnjs.cloudflare.com/polyfill/v{{version}}/polyfill.min.js?features=es6"
+    version: "3"
