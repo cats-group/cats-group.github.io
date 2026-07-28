@@ -44,7 +44,7 @@ team_members:
 
   - name: Ilayda Dogan
     role: Undergraduate Student
-    image: ilayda_dogan.png
+    image: ilayda_dogan.jpeg
     linkedin: https://www.linkedin.com/in/ilayda-dogan-id1/
 
   - name: Jeremy Zhao
