@@ -19,27 +19,23 @@ team_members:
     image: krystal_gong.png
     website: https://krystalgong.github.io/
 
-  - name: Sagnik Chakravarty 
-    role: MS Student
-    image: lab_logo.png
-    linkedin: https://www.linkedin.com/in/sagnik-chakravarty/
+  - name: Phuong-Anh Nguyen-Le (Kem)
+    role: PhD Student
+    image: kem_nguyen_le.jpg
+    website: https://kemnguyenle.github.io/
+    twitter: https://x.com/KemNguyenLe
+    linkedin: https://www.linkedin.com/in/kem-nguyen-le/
 
   - name: Surendra Kumar Chandrasekaran
     role: MS Student
-    image: lab_logo.png
+    image: surendra_chandrasekaran.jpeg
     linkedin: https://www.linkedin.com/in/surendra-kumar-c/
 
   - name: Ashwath David
     role: MS Student
-    image: lab_logo.png
+    image: ashwath_david.png
     website: https://adx-coder.github.io/
     linkedin: https://www.linkedin.com/in/ashwath-david
-
-  - name: Disha Jain
-    role: MS Student
-    image: lab_logo.png
-    linkedin: https://www.linkedin.com/in/disha-jain-49a5261b7
-
 
   - name: Tanaya Joshi
     role: MS Student
@@ -48,7 +44,7 @@ team_members:
 
   - name: Ilayda Dogan
     role: Undergraduate Student
-    image: lab_logo.png
+    image: ilayda_dogan.png
     linkedin: https://www.linkedin.com/in/ilayda-dogan-id1/
 
   - name: Jeremy Zhao
@@ -56,12 +52,6 @@ team_members:
     image: jeremy_zhao.jpg
     linkedin: https://www.linkedin.com/in/jeremy-zhao-a504b2280
 
-  - name: Phuong-Anh Nguyen-Le (Kem)
-    role: PhD Collaborator
-    image: kem_nguyen_le.jpg
-    website: https://kemnguyenle.github.io/
-    twitter: https://x.com/KemNguyenLe
-    linkedin: https://www.linkedin.com/in/kem-nguyen-le/
 
 
 
